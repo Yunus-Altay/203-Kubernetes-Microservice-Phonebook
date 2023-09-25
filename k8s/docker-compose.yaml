@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: mysql_db
+    environment:
+      MYSQL_DATABASE: bookstore_db
+      MYSQL_USER: simaox
+      MYSQL_PASSWORD: simaox1234
+      MYSQL_ROOT_PASSWORD: admin1234
+    ports:
+      - "3306:3306"
+    networks:
+      - app-network
+
+networks:
+  app-network:
