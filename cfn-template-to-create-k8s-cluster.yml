@@ -155,8 +155,8 @@ Resources:
             sudo -i -u ubuntu kubectl patch storageclass local-path -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'
             cd /home/ubuntu && git clone https://github.com/Yunus-Altay/203-Kubernetes-Microservice-Phonebook.git
             cd /home/ubuntu/203-Kubernetes-Microservice-Phonebook
-            su - ubuntu -c 'kubectl create secret generic my-db-passwords --from-literal=MYSQL_PASSWORD=simaox1234 --from-literal=MYSQL_ROOT_PASSWORD=admin1234'
-            su - ubuntu -c 'kubectl create cm phonebook-cm --from-literal=MYSQL_DATABASE=bookstore_db --from-literal=MYSQL_USER=simaox --from-literal=MYSQL_DATABASE_HOST=db-service'
+            # su - ubuntu -c 'kubectl create secret generic my-db-passwords --from-literal=MYSQL_PASSWORD=simaox1234 --from-literal=MYSQL_ROOT_PASSWORD=admin1234'
+            # su - ubuntu -c 'kubectl create cm phonebook-cm --from-literal=MYSQL_DATABASE=bookstore_db --from-literal=MYSQL_USER=simaox --from-literal=MYSQL_DATABASE_HOST=db-service'
             su - ubuntu -c 'kubectl apply -f /home/ubuntu/203-Kubernetes-Microservice-Phonebook/k8s'
             
   KubeWorker1:
