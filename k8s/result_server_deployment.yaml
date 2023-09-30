@@ -23,6 +23,11 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 80
+        # envFrom:
+        #   - secretRef: 
+        #       name: my-db-passwords
+        #   - configMapRef:
+        #       name: phonebook-cm
         env:
           - name: MYSQL_DATABASE
             valueFrom:

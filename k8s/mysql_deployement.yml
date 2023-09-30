@@ -20,6 +20,11 @@ spec:
         name: mysql
         ports:
         - containerPort: 3306
+        # envFrom:
+        #   - secretRef: 
+        #       name: my-db-passwords
+        #   - configMapRef:
+        #       name: phonebook-cm
         env:
           - name: MYSQL_DATABASE
             valueFrom:
